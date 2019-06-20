@@ -36,8 +36,11 @@
         "FOO=foo"
       ],
       "inline": [
-        "sudo apt-get update",
-        "sudo apt-get install apache2 apache2-doc apache2-utils -y"
+                "sudo yum install tomcat -y",
+                "sudo yum install tomcat-webapps tomcat-admin-webapps -y",
+                "sudo systemctl start tomcat",
+                "sudo systemctl enable tomcat",
+                "sudo service tomcat status"
       ]
     }
   ]

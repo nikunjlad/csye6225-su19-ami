@@ -48,7 +48,13 @@
                 "tar xvf apache-tomcat-9.0.21.tar.gz",
                 "mv apache-tomcat-9.0.21 tomcat",
                 "cd ~/tomcat/bin/",
-                "./startup.sh"
+                "./startup.sh",
+                "sudo yum install ruby",
+                "sudo yum install wget",
+                "cd /home/centos",
+                "wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
             ]
         }
     ]

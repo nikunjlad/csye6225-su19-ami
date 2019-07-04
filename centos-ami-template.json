@@ -2,7 +2,7 @@
     "variables": {
         "aws_access_key": "",
         "aws_secret_key": "",
-        "aws_region": "",
+        "aws_region": "us-east-1",
         "subnet_id": "",
         "source_ami": "ami-9887c6e7",
         "ssh_username":"centos"
@@ -22,9 +22,9 @@
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
-                    "volume_size": 8,
+                    "volume_size": 20,
                     "volume_type": "gp2",
-                    "delete_on_termination": true
+                    "delete_on_termination": false
                 }
             ]
         }
@@ -48,7 +48,12 @@
                 "tar xvf apache-tomcat-9.0.21.tar.gz",
                 "mv apache-tomcat-9.0.21 tomcat",
                 "cd ~/tomcat/bin/",
-                "./startup.sh"
+                "./startup.sh",
+                "sudo yum install ruby -y",
+                "cd /home/centos",
+                "wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
             ]
         }
     ]

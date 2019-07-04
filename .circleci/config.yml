@@ -19,7 +19,7 @@ jobs:
             chmod +x packer
       - run:
           name: Validate Packer Template
-          command: ./packer validate centos-ami-templates.json
+          command: ./packer validate centos-ami-template.json
       - run:
           name: Build AMI
           command: |

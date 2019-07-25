@@ -45,6 +45,7 @@
                 "cd ~ && mkdir downloads && cd downloads",
                 "wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm",
                 "sudo rpm -U ./amazon-cloudwatch-agent.rpm",
+                "cd ~ && wget https://github.com/nikunjlad/csye6225-su19-ami/blob/master/centos-ami-template.json",
                 "cd ~ && mkdir images",
                 "wget http://mirrors.ibiblio.org/apache/tomcat/tomcat-9/v9.0.21/bin/apache-tomcat-9.0.21.tar.gz",
                 "tar xvf apache-tomcat-9.0.21.tar.gz",
